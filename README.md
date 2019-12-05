@@ -1,17 +1,13 @@
-# l34-todo-login-and-auth
+# LAB - l34-todo-login-and-auth
 
+## Todo Login-and-Auth
+
+### Author: Jonathan Kimball
+
+### Links and Resources
 * [submission PR](https://github.com/401-advanced-javascript-kimball/l34-todo-login-and-auth/pull/1)
 * [travis](https://travis-ci.com/401-advanced-javascript-kimball/l34-todo-login-and-auth)
 
-# LAB - 
-
-## Project Name
-
-### Author: Student/Group Name
-
-### Links and Resources
-* [submission PR](http://xyz.com)
-* [travis](http://xyz.com)
 * [back-end](http://xyz.com) (when applicable)
 * [front-end](http://xyz.com) (when applicable)
 
@@ -132,3 +128,10 @@ Refer to the the [lab submission instructions](../../../reference/submission-ins
 
 ----------
 
+remote: Create a pull request for 'submission' on GitHub by visiting:
+remote:      https://github.com/401-advanced-javascript-kimball/l34-todo-login-and-auth/pull/new/submission
+remote:
+To github.com:401-advanced-javascript-kimball/l34-todo-login-and-auth.git
+ * [new branch]      submission -> submission
+Submission Link:
+https://github.com/401-advanced-javascript-kimball/l34-todo-login-and-auth/blob/submission/README.md

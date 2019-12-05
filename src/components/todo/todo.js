@@ -1,56 +1,57 @@
-import React from "react";
-import uuid from "uuid/v4";
-import Counter from "../counter/counter.js";
-import { When } from "../if";
+/* eslint-disable require-jsdoc */
+import React from 'react';
+import uuid from 'uuid/v4';
+import Counter from '../counter/counter.js';
+import {When} from '../if';
 
-import "./todo.scss";
+import './todo.scss';
 
 class ToDo extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { todoList: [], item: {}, editing: false };
+    this.state = {todoList: [], item: {}, editing: false};
   }
 
-  handleInputChange = e => {
-    let item = {
+  handleInputChange = (e) => {
+    const item = {
       text: e.target.value,
       complete: !!e.target.complete,
-      id: e.target.id || uuid()
+      id: e.target.id || uuid(),
     };
-    this.setState({ item });
+    this.setState({item});
   };
 
-  addItem = e => {
+  addItem = (e) => {
     e.preventDefault();
     e.target.reset();
-    this.setState({ todoList: [...this.state.todoList, this.state.item] });
+    this.setState({todoList: [...this.state.todoList, this.state.item]});
   };
 
-  updateItem = e => {
+  updateItem = (e) => {
     e.preventDefault();
     this.saveItem(this.state.item);
   };
 
-  toggleComplete = id => {
-    let item = this.state.todoList.filter(i => i.id === id)[0] || {};
+  toggleComplete = (id) => {
+    const item = this.state.todoList.filter((i) => i.id === id)[0] || {};
     if (item.id) {
       item.complete = !item.complete;
       this.saveItem(item);
     }
   };
 
-  saveItem = updatedItem => {
+  saveItem = (updatedItem) => {
     this.setState({
-      todoList: this.state.todoList.map(item =>
-        item.id === updatedItem.id ? updatedItem : item
+      todoList: this.state.todoList.map((item) =>
+        item.id === updatedItem.id ? updatedItem : item,
       ),
-      editing: false
+      editing: false,
     });
   };
 
-  toggleEdit = id => {
-    let editing = this.state.editing === id ? false : id;
-    this.setState({ editing });
+  toggleEdit = (id) => {
+    const editing = this.state.editing === id ? false : id;
+    this.setState({editing});
   };
 
   render() {
@@ -73,7 +74,7 @@ class ToDo extends React.Component {
           <div>
             <ul>
               {this.state.todoList &&
-                this.state.todoList.map(item => (
+                this.state.todoList.map((item) => (
                   <li
                     className={`complete-${item.complete.toString()}`}
                     key={item.id}
